@@ -1,0 +1,17 @@
+"resourcemanagerGetPrivateEndpoint.0005": {
+    "solutionExposure": "prod",
+    "name": "${Messages.solutionsHub.solutions.resourcemanagerGetPrivateEndpoint.solutionName()}",
+    "description": "${Messages.solutionsHub.solutions.resourcemanagerGetPrivateEndpoint.stackDescription()}",
+    "longDescription": {
+        "description": "${Messages.solutionsHub.solutions.resourcemanagerGetPrivateEndpoint.longDescription()}"
+    },
+    "icon": {
+        "iconLine1": "ResourceManager",
+        "iconLine2": "Get",
+        "iconLine3": "PrivateEndpoint"
+    },
+    "terraformVersion": "0.12.x",
+    "isFreeTier": false,
+    "type": "service",
+    "categoryId": "1"
+}
