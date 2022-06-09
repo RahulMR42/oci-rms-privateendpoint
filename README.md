@@ -1,7 +1,7 @@
 Use Private Endpoints to access a private resource from Oracle Resource manager
 ----
 
-### Sample terraform.tfvars 
+### Procedure.
 
 - Create a file `terraform.tfvars` and add below entries with valid values.
 
@@ -24,4 +24,12 @@ compartment_ocid = "ocid1.compartment.ocxxx"
 ```markdown
 $terraform plan
 $terraform apply
+```
+
+- Output 
+
+- Delete the stack 
+
+```markdown
+terraform destroy
 ```

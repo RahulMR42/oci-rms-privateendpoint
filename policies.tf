@@ -6,7 +6,6 @@ resource "oci_identity_group" "rms_pe_group" {
     compartment_id = var.tenancy_ocid
     description = "Group for orm PE execution"
     name           = "ormpe_group_${random_string.randomstring.result}"
-    defined_tags                   = { "${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
 
 }
 
@@ -15,7 +14,7 @@ resource "oci_identity_user_group_membership" "rms_pe_group_member" {
   provider   = oci.home_region
   group_id   = oci_identity_group.rms_pe_group.id
   user_id    = var.user_ocid
-  defined_tags                   = { "${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
+
 }
 
 
@@ -24,7 +23,6 @@ resource "oci_identity_policy" "ormpolicy" {
   name           = "ormpolicies-${random_string.randomstring.result}"
   description    = "policy created for oci orm "
   compartment_id = var.compartment_ocid
-  defined_tags                   = { "${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
   statements = [
     "Allow group Administrators to manage orm-private-endpoints in compartment id ${var.compartment_ocid}",
     "Allow group Administrators to use virtual-network-family in compartment id ${var.compartment_ocid}",
