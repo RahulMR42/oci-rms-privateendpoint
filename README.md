@@ -33,3 +33,9 @@ $terraform apply
 ```markdown
 terraform destroy
 ```
+
+### Contributors
+
+- Author : Rahul M R. 
+- Collaborators : Vimal Meena
+- Last release : June 2022
